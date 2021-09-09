@@ -7,7 +7,7 @@ const options = {
 };
 
 document.addEventListener("DOMContentLoaded", start);
-let madretter;
+let hunde;
 let container;
 let temp;
 let filter = "alle";
@@ -18,56 +18,54 @@ function start() {
   temp = document.querySelector("template");
 
   const filterKnapper = document.querySelectorAll("nav button");
-  filterKnapper.forEach((knap) =>
-    knap.addEventListener("click", filtrerMadretter)
-  );
+  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerHunde));
   hentData();
 }
 
-function filtrerMadretter() {
+function filtrerHunde() {
   filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 
-  visMad();
+  visHund();
   header.textContent = this.textContent;
 }
 
 async function hentData() {
   const resspons = await fetch(url, options);
-  madretter = await resspons.json();
-  visMad();
+  hunde = await resspons.json();
+  visHund();
 }
 
-function visMad() {
+function visHund() {
   container.textContent = "";
 
-  madretter.forEach((madret) => {
-    if (filter == madret.kategori || filter == "alle") {
+  hunde.forEach((dyr) => {
+    if (filter == dyr.kategori || filter == "alle") {
       const klon = temp.cloneNode(true).content;
-      const md = "-md.jpg";
-      klon.querySelector("img").src = "billeder/" + madret.billednavn + md;
-      klon.querySelector("h3").textContent = madret.navn;
-      klon.querySelector(".kortbeskrivelse").textContent =
-        madret.kortbeskrivelse;
-      klon.querySelector(".pris").textContent = "Pris: " + madret.pris + ",-";
+      const pic = ".jpg";
+      klon.querySelector("img").src = "billeder/" + dyr.billede + pic;
+      klon.querySelector("h3").textContent = dyr.navn;
+      klon.querySelector(".kortbeskrivelse").textContent = dyr.kortbeskrivelse;
+      klon.querySelector(".pris").textContent = "Pris: " + dyr.pris + ",-";
       klon
         .querySelector("article")
-        .addEventListener("click", () => visDetaljer(madret));
+        .addEventListener("click", () => visDetaljer(dyr));
       container.appendChild(klon);
     }
   });
 }
 
-function visDetaljer(madData) {
+function visDetaljer(hundeData) {
   const popup = document.querySelector("#popup");
   popup.style.display = "block";
   popup.querySelector(".billedep").src =
-    "billeder/" + madData.billednavn + "-md.jpg";
-  popup.querySelector("h2").textContent = madData.navn;
-  popup.querySelector(".langbeskrivelse").textContent = madData.langbeskrivelse;
-  popup.querySelector(".pris").textContent = "Pris: " + madData.pris + ",-";
-  console.log(madData);
+    "billeder/" + hundeData.billednavn + "-md.jpg";
+  popup.querySelector("h2").textContent = hundeData.navn;
+  popup.querySelector(".langbeskrivelse").textContent =
+    hundeData.langbeskrivelse;
+  popup.querySelector(".pris").textContent = "Pris: " + hundeData.pris + ",-";
+  console.log(hundeData);
 }
 
 document.querySelector("#tilbage").addEventListener("click", lukPopup);
