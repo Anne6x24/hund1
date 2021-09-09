@@ -11,7 +11,7 @@ let hunde;
 let container;
 let temp;
 let filter = "alle";
-const header = document.querySelector("header h2");
+const header = document.querySelector(".filtermenu h2");
 
 function start() {
   container = document.querySelector(".data_container");
@@ -23,7 +23,7 @@ function start() {
 }
 
 function filtrerHunde() {
-  filter = this.dataset.kategori;
+  filter = this.dataset.talent;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 
@@ -41,13 +41,14 @@ function visHund() {
   container.textContent = "";
 
   hunde.forEach((dyr) => {
-    if (filter == dyr.kategori || filter == "alle") {
+    if (filter == dyr.talent || filter == "alle") {
       const klon = temp.cloneNode(true).content;
       const pic = ".jpg";
       klon.querySelector("img").src = "billeder/" + dyr.billede + pic;
       klon.querySelector("h3").textContent = dyr.navn;
-      klon.querySelector(".kortbeskrivelse").textContent = dyr.kortbeskrivelse;
-      klon.querySelector(".pris").textContent = "Pris: " + dyr.pris + ",-";
+      klon.querySelector(".alder").textContent = "Alder: " + dyr.alder;
+      klon.querySelector(".race").textContent = "Race: " + dyr.race;
+      klon.querySelector(".talent").textContent = "Talent: " + dyr.talent;
       klon
         .querySelector("article")
         .addEventListener("click", () => visDetaljer(dyr));
@@ -60,7 +61,7 @@ function visDetaljer(hundeData) {
   const popup = document.querySelector("#popup");
   popup.style.display = "block";
   popup.querySelector(".billedep").src =
-    "billeder/" + hundeData.billednavn + "-md.jpg";
+    "billeder/" + hundeData.billednavn + ".jpg";
   popup.querySelector("h2").textContent = hundeData.navn;
   popup.querySelector(".langbeskrivelse").textContent =
     hundeData.langbeskrivelse;
