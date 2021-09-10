@@ -1,8 +1,28 @@
-window.addEventListener("load", sidenVises);
+const url = "https://hunde-e58a.restdb.io/rest/hunde";
 
-function sidenVises() {
-  console.log("sidenVises");
+const options = {
+  headers: {
+    "x-apikey": "6139d6f343cedb6d1f97eec8",
+  },
+};
+
+window.addEventListener("load", start);
+let hunde;
+let container;
+let temp;
+let filter = "alle";
+const header = document.querySelector(".filtermenu h2");
+
+function start() {
+  container = document.querySelector(".data_container");
+  temp = document.querySelector("template");
+
+  const filterKnapper = document.querySelectorAll("nav button");
+  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerHunde));
+
   document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
+  hentData();
 }
 
 function toggleMenu() {
@@ -16,30 +36,6 @@ function toggleMenu() {
   } else {
     document.querySelector("#menuknap").textContent = "X";
   }
-}
-
-const url = "https://hunde-e58a.restdb.io/rest/hunde";
-
-const options = {
-  headers: {
-    "x-apikey": "6139d6f343cedb6d1f97eec8",
-  },
-};
-
-document.addEventListener("DOMContentLoaded", start);
-let hunde;
-let container;
-let temp;
-let filter = "alle";
-const header = document.querySelector(".filtermenu h2");
-
-function start() {
-  container = document.querySelector(".data_container");
-  temp = document.querySelector("template");
-
-  const filterKnapper = document.querySelectorAll("nav button");
-  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerHunde));
-  hentData();
 }
 
 function filtrerHunde() {
@@ -59,7 +55,7 @@ async function hentData() {
 
 function visHund() {
   container.textContent = "";
-
+  console.log(filter);
   hunde.forEach((dyr) => {
     if (filter == dyr.talent || filter == "alle") {
       const klon = temp.cloneNode(true).content;
