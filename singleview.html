@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Single</title>
+  </head>
+  <body id="single">
+    <main>
+      <button>Tilbage</button>
+      <article>
+        <section>
+          <h3 class="navn"></h3>
+          <img src="" alt="" class="billede" />
+          <p class="race"></p>
+          <p class="alder"></p>
+          <p class="talent"></p>
+          <p class="pris"></p>
+
+          <p class="langbeskrivelse"></p>
+        </section>
+      </article>
+    </main>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      console.log(id);
+      let hunde;
+
+      const url = "https://hunde-e58a.restdb.io/rest/hunde/";
+      const knap = document.querySelector("button");
+
+      const options = {
+        headers: {
+          "x-apikey": "6139d6f343cedb6d1f97eec8",
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", hentData);
+
+      async function hentData() {
+        const JSONData = await fetch(url + id, options);
+        hunde = await JSONData.json();
+        console.log("loaded", hunde);
+        knap.addEventListener("click", () => {
+          location.href = "hund.html";
+        });
+
+        visHund();
+      }
+
+      function visHund() {
+        document.querySelector(".navn").textContent = hunde.navn;
+        document.querySelector(".billede").src =
+          "billeder/" + hunde.billede + ".jpg";
+        document.querySelector(".race").textContent = hunde.race;
+        document.querySelector(".alder").textContent = hunde.alder;
+        document.querySelector(".talent").textContent = hunde.talent;
+        document.querySelector(".pris").textContent = hunde.pris;
+        document.querySelector(".langbeskrivelse").textContent =
+          hunde.langbeskrivelse;
+
+        console.log(hunde);
+      }
+    </script>
+  </body>
+</html>
