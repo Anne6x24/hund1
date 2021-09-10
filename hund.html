@@ -27,25 +27,41 @@
     </header>
 
     <main>
+      <section class="filtermenu">
+        <h2>Alle</h2>
+        <nav>
+          <ul>
+            <button data-kategori="alle" class="valgt">Alle</button>
+            <button data-kategori="performance">Performance</button>
+            <button data-kategori="action">Action</button>
+            <button data-kategori="model">Model</button>
+            <button data-kategori="terapi">Putte/Therapy</button>
+          </ul>
+        </nav>
+      </section>
+
       <section id="popup">
         <button id="tilbage">X</button>
         <article id="popupinfo">
           <img class="billedep" src="" alt="" />
           <h2></h2>
           <hr />
-          <p class="langbeskrivelse"></p>
+          <p class="alder"></p>
+          <p class="race"></p>
+          <p class="talent"></p>
           <p class="pris"></p>
+          <p class="kortbeskrivelse"></p>
         </article>
       </section>
       <section class="data_container"></section>
 
       <template>
         <article>
-          <img src="" alt="" />
           <h3></h3>
-          <hr />
-          <p class="kortbeskrivelse"></p>
-          <p class="pris"></p>
+          <img src="" alt="" />
+          <p class="alder"></p>
+          <p class="race"></p>
+          <p class="talent"></p>
         </article>
       </template>
     </main>
