@@ -27,7 +27,6 @@
 
     <main>
       <section class="filtermenu">
-        <h2>Alle</h2>
         <nav>
           <ul>
             <button data-talent="alle" class="valgt">Alle</button>
@@ -40,18 +39,18 @@
       </section>
 
       <section id="popup">
-        <button id="tilbage">X</button>
         <article id="popupinfo">
-          <img class="billedep" src="" alt="" />
-          <h2></h2>
-          <hr />
-          <p class="alder"></p>
-          <p class="race"></p>
-          <p class="talent"></p>
-          <p class="pris"></p>
-          <p class="kortbeskrivelse"></p>
+          <button id="tilbage">X</button>
+          <img class="billede" src="" alt="" />
+          <h3></h3>
+          <p>Alder:<span class="alder"></span></p>
+          <p>Race: <span class="race"></span></p>
+          <p>Talent: <span class="talent"></span></p>
+          <p>Pris: <span class="pris"></span></p>
+          <p><span class="kortbeskrivelse"></span></p>
         </article>
       </section>
+
       <section class="data_container"></section>
 
       <template>
@@ -61,6 +60,8 @@
           <p class="alder"></p>
           <p class="race"></p>
           <p class="talent"></p>
+          <button class="quickview">Quickview</button>
+          <button class="detaljer">Detaljer</button>
         </article>
       </template>
     </main>
