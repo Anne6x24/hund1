@@ -6,7 +6,7 @@ const options = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", start);
+window.addEventListener("load", start);
 let hunde;
 let container;
 let temp;
@@ -19,7 +19,23 @@ function start() {
 
   const filterKnapper = document.querySelectorAll("nav button");
   filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerHunde));
+
+  document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
   hentData();
+}
+
+function toggleMenu() {
+  console.log("toggleMenu");
+  document.querySelector("#menu").classList.toggle("hidden");
+
+  let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+  if (erSkjult == true) {
+    document.querySelector("#menuknap").textContent = "☰";
+  } else {
+    document.querySelector("#menuknap").textContent = "X";
+  }
 }
 
 function filtrerHunde() {
@@ -39,7 +55,7 @@ async function hentData() {
 
 function visHund() {
   container.textContent = "";
-
+  console.log(filter);
   hunde.forEach((dyr) => {
     if (filter == dyr.talent || filter == "alle") {
       const klon = temp.cloneNode(true).content;
