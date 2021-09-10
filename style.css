@@ -2,6 +2,31 @@ img {
   width: 100%;
 }
 
+/*TYPOGRAFI*/
+
+h1,
+h2 {
+  font-family: "Rampart One", cursive;
+}
+
+h3,
+p,
+button,
+a {
+  font-family: "Urbanist", sans-serif;
+}
+
+a {
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /*BURGERMENU*/
 
 .hidden {
@@ -22,8 +47,9 @@ img {
   transform-origin: top left;
 }
 
-nav {
+.header_nav {
   text-align: end;
+  align-items: baseline;
 }
 
 @media only screen and (min-width: 600px) {
@@ -68,7 +94,7 @@ header .logo img {
 }
 
 .valgt {
-  background-color: darkred;
+  background-color: #29abe2;
 }
 
 /*pop-up*/
@@ -102,4 +128,10 @@ header .logo img {
   overflow: hidden;
   font-weight: bolder;
   font-size: 16px;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: #29abe2;
 }
