@@ -1,3 +1,7 @@
+img {
+  width: 100%;
+}
+
 /*BURGERMENU*/
 
 .hidden {
@@ -9,12 +13,17 @@
 
 #menuknap {
   display: inline-block;
+  text-align: end;
 }
 
 #menu {
   list-style-type: none;
   transition: transform 0.3s;
   transform-origin: top left;
+}
+
+nav {
+  text-align: end;
 }
 
 @media only screen and (min-width: 600px) {
@@ -30,4 +39,67 @@
   #menu li {
     display: inline-block;
   }
+}
+
+/*HEADER WEB*/
+
+header {
+  padding: 1rem 1.5rem;
+  text-align: end;
+  top: 0;
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+header .logo {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+header .logo img {
+  width: 100px;
+  display: inline;
+}
+
+.data_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.valgt {
+  background-color: darkred;
+}
+
+/*pop-up*/
+
+#popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: #00000099;
+  padding-block: 2em;
+  display: none;
+  overflow: scroll;
+}
+
+#popup h2 {
+  margin: 0;
+}
+
+#popup article {
+  background-color: white;
+  width: 85%;
+  margin: auto;
+}
+
+#popup button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: bolder;
+  font-size: 16px;
 }
