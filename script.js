@@ -35,6 +35,7 @@ function filtrerHunde() {
 async function hentData() {
   const resspons = await fetch(url, options);
   hunde = await resspons.json();
+  console.log(hunde);
   visHund();
 }
 
@@ -51,8 +52,13 @@ function visHund() {
       klon.querySelector(".race").textContent = "Race: " + dyr.race;
       klon.querySelector(".talent").textContent = "Talent: " + dyr.talent;
       klon
-        .querySelector("article")
+        .querySelector(".quickview")
         .addEventListener("click", () => visDetaljer(dyr));
+
+      klon.querySelector(".detaljer").addEventListener("click", () => {
+        location.href = "singleview.html?id=" + dyr._id;
+      });
+
       container.appendChild(klon);
     }
   });
@@ -61,12 +67,15 @@ function visHund() {
 function visDetaljer(hundeData) {
   const popup = document.querySelector("#popup");
   popup.style.display = "block";
-  popup.querySelector(".billedep").src =
-    "billeder/" + hundeData.billednavn + ".jpg";
-  popup.querySelector("h2").textContent = hundeData.navn;
-  popup.querySelector(".langbeskrivelse").textContent =
-    hundeData.langbeskrivelse;
-  popup.querySelector(".pris").textContent = "Pris: " + hundeData.pris + ",-";
+  popup.querySelector(".billede").src =
+    "billeder/" + hundeData.billede + ".jpg";
+  popup.querySelector("h3").textContent = hundeData.navn;
+  popup.querySelector(".alder").textContent = hundeData.alder;
+  popup.querySelector(".race").textContent = hundeData.race;
+  popup.querySelector(".talent").textContent = hundeData.talent;
+  popup.querySelector(".kortbeskrivelse").textContent =
+    hundeData.kortbeskrivelse;
+  popup.querySelector(".pris").textContent = hundeData.pris + ",-";
   console.log(hundeData);
 }
 
