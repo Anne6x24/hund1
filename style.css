@@ -114,6 +114,7 @@ article button:hover {
   display: inline-block;
   text-align: end;
   scale: 1.5;
+  font-family: "Urbanist", sans-serif;
 }
 
 #menu {
@@ -122,10 +123,15 @@ article button:hover {
   transform-origin: top left;
 }
 
-.header_nav {
+header ul li {
+  margin: 20px 20px;
+}
+
+/*.header_nav {
   text-align: end;
   align-items: baseline;
-}
+  background-color: var(--primary);
+} */
 
 @media only screen and (min-width: 600px) {
   header {
@@ -141,7 +147,7 @@ article button:hover {
     opacity: 1;
     display: flex;
     justify-content: end;
-    gap: 30px;
+    /*gap: 30px;*/
   }
 
   #menu li {
