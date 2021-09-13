@@ -13,21 +13,54 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
     <style>
+
+      * {
+        box-sizing: border-box;
+      }
       #box {
         background-color: var(--primary);
       }
 
+      img {
+        min-width: 60%;
+        display: grid;
+        grid-column: 3;
+        
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+
+
+      /* underoverskrifter i colonner  */
       @media (min-width: 780px) {
-        #omos .section_wrapper {
+        #section2 .section_wrapper {
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-gap: 50px;
         }
 
-        #omos .col {
+        #section2 .col {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+        }
+
+        .hunde img {
+          max-width: 60%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        .kasse {
+          background-color: #29abe2;
+          display: grid;
+          grid-column: 2;
+
         }
         
       }
@@ -55,12 +88,21 @@
     </header>
 
     <main>
-      <h2>OM OS</h2>
+      
+      
+   
+     
+      <div class="kasse">
+        <div class="hunde">
+          <img src="svg/hunde_flok.png" alt="">
+        </div>
+
+      </div>
 
      
 
 
-<section id="omos">
+<section id="section2">
 <div class ="section_wrapper">
   <div class="col">
     <div class="top">
@@ -88,46 +130,6 @@
 </section>
 
 
-
-
-
-      
-      <!-- <section id="section1">
-        <div class ="section_wrapper">
-          <article>
-        <h3>Begyndselsen</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-          Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-          enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-          corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-          Nulla voluptates laboriosam aspernatur!</p>
-        </article>
-      </div>
-      <div class ="section_wrapper">
-        <article>
-          <h3>fremtid</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-            enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-            corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-            Nulla voluptates laboriosam aspernatur!</p>
-          </article>
-        </div>
-        
-      </section> -->
-
-      <!-- <section id="section2">
-        <div class ="section_wrapper">
-          <article>
-        <h3>fremtid</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-          Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-          enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-          corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-          Nulla voluptates laboriosam aspernatur!</p>
-        </article>
-        </div>
-      </section> -->
     </main>
     <script src="burgermenu.js"></script>
   </body>
