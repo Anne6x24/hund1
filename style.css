@@ -113,6 +113,7 @@ article button:hover {
 #menuknap {
   display: inline-block;
   text-align: end;
+  scale: 1.5;
 }
 
 #menu {
@@ -138,6 +139,9 @@ article button:hover {
   #menu.hidden {
     transform: translateX(0);
     opacity: 1;
+    display: flex;
+    justify-content: end;
+    gap: 30px;
   }
 
   #menu li {
@@ -217,4 +221,13 @@ article {
 
 footer {
   background-color: var(--primary);
+  padding: 1em;
+  text-align: center;
+}
+
+@media (min-width: 780px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
