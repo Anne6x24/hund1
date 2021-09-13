@@ -179,6 +179,7 @@ article {
   padding-block: 2em;
   display: none;
   overflow: scroll;
+  padding-inline: 0;
 }
 
 #popup h2 {
@@ -252,5 +253,15 @@ footer {
 
   #popupinfo .tekst {
     margin: 1.5rem;
+  }
+
+  #popup article {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1000px) {
+  #popup article {
+    width: 40%;
   }
 }
