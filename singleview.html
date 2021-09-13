@@ -34,18 +34,22 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="singleview">
       <article>
+        <button class="tilbage">Tilbage</button>
         <section>
-          <button>Tilbage</button>
-          <h3 class="navn"></h3>
-          <img src="" alt="" class="billede" />
-          <p class="race"></p>
-          <p class="alder"></p>
-          <p class="talent"></p>
-          <p class="pris"></p>
+          <div>
+            <img src="" alt="" class="billede" />
+          </div>
+          <div>
+            <h3 class="navn"></h3>
+            <p class="race"></p>
+            <p class="alder"></p>
+            <p class="talent"></p>
+            <p class="pris"></p>
 
-          <p class="langbeskrivelse"></p>
+            <p class="langbeskrivelse"></p>
+          </div>
         </section>
       </article>
     </main>
@@ -82,10 +86,11 @@
         document.querySelector(".navn").textContent = hunde.navn;
         document.querySelector(".billede").src =
           "billeder/" + hunde.billede + ".jpg";
-        document.querySelector(".race").textContent = hunde.race;
-        document.querySelector(".alder").textContent = hunde.alder;
-        document.querySelector(".talent").textContent = hunde.talent;
-        document.querySelector(".pris").textContent = hunde.pris;
+        document.querySelector(".race").textContent = "Race: " + hunde.race;
+        document.querySelector(".alder").textContent = "Alder: " + hunde.alder;
+        document.querySelector(".talent").textContent =
+          "Talent: " + hunde.talent;
+        document.querySelector(".pris").textContent = "Pris: " + hunde.pris;
         document.querySelector(".langbeskrivelse").textContent =
           hunde.langbeskrivelse;
 
