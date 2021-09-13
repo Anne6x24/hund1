@@ -12,6 +12,36 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <style>
+      #kontakt {
+        line-height: 2em;
+      }
+      #kontakt h1 {
+        margin-bottom: 1.3em;
+      }
+
+      @media (min-width: 780px) {
+        #kontakt {
+          margin: 5rem;
+        }
+        #kontakt_section1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin: 3rem;
+          grid-gap: 5rem;
+        }
+
+        #kontakt_section2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin: 3rem;
+          grid-gap: 5rem;
+        }
+        #kontakt_section2 img {
+          max-width: 70%;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -32,16 +62,60 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h2></h2>
-      <p></p>
-      <p></p>
-      <h3></h3>
-      --- maps ---
-      <img src="" alt="" />
-      <p></p>
+    <main id="kontakt">
+      <h1>Kontakt T-DOGZ</h1>
+      <section id="kontakt_section1">
+        <div>
+          <h2>Fundet din drømmehund</h2>
+          <p>
+            Vil du gerne booke en hund skal du gøre det gennem vores business
+            mail eller vores telefon nummer. Vores business mail er
+            <u>tdogz@gmail.dk</u> og vores telefon nummer er
+            <u>+45 10 10 10 10</u>, hvorefter du skal taste 1 for booking. Vi
+            vender altid tilbage indenfor 24 timer over mail og vores telefon
+            tider er mandag - torsdag mellem 8 og 12. Du kan dog altid ringe og
+            ligge en besked på vores telefonsvarer og så vil vores sekretærer
+            ringe dig op inden for nærmeste åbne telefontid.
+          </p>
+        </div>
+        <div>
+          <h2>Generelle spørgsmål</h2>
+          <p>
+            Har du spørgsmål eller lignende skal du kontake vores support. Det
+            er f.eks. spørgsmål i forhold til vores firma eller hvis du ønsker
+            at leje lokaler. Det er også her du skal kontakte os hvis du ønsker
+            at tilmelde din hund som ambassadør. Support mailen er
+            <u>Tdogz_kundeservice@gmail.com</u> og vores telefon nummer er
+            <u>+45 10 10 10 10</u> hvorefter du skal taste 2 for support eller 3
+            for at høre mere om at tilmelde din hund og blive ambassadør.
+          </p>
+        </div>
+      </section>
+
+      <section id="kontakt_section2">
+        <div>
+          <h2>Find T-DOGZ</h2>
+          <img src="SVG/lokation.jpg" alt="maps" />
+        </div>
+        <div>
+          <h2>Vores adresse</h2>
+          <p>
+            Vores adresse er Hundegaden 12, 1234 KBH K. Her kan du finde os
+            fysisk. Vores lokation er let tilgængelig i hjertet af København,
+            dog er der få parkeringsmuligheder så vi anbefaler at man sætter tid
+            af til at finde parkeringsplads hvis man er i bil. Vores kontor har
+            kun åbent mandag-torsdag mellem 8-10, derfor anbefaler vi at
+            kontakte os på tlf eller mail medmindre det er en hastesag. Det er
+            muligt at leje lokaler til fotoshoots mm. Hvis du ønsker at leje
+            lokale skal du kontakte vores kundeservice først.
+          </p>
+        </div>
+      </section>
     </main>
     <script src="burgermenu.js"></script>
   </body>
-  <footer></footer>
+
+  <footer>
+    <h3></h3>
+  </footer>
 </html>
