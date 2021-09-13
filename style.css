@@ -2,6 +2,23 @@ img {
   width: 100%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1200px) auto;
+  align-items: center;
+}
+
+main > section {
+  grid-column: 2/3;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+
 /*TYPOGRAFI*/
 
 h1,
@@ -25,6 +42,63 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/*FARVER*/
+
+html {
+  --primary: #29abe2;
+  --secondary: #fff;
+  --tertiary: #000;
+  --accent: #c5c9ca;
+  --text: #404042;
+}
+
+/*KNAPPER*/
+
+nav button {
+  border: 1px solid var(--accent);
+  background-color: var(--secondary);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.2rem 0.1rem;
+  cursor: pointer;
+  padding: 0.7rem;
+  font-size: 1em;
+  font-weight: bolder;
+  color: var(--primary);
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav button:hover {
+  scale: 1.1;
+}
+
+.valgt {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+article button {
+  border: 1px solid var(--accent);
+  background-color: var(--secondary);
+  padding: 0.7rem;
+  font-size: 1em;
+}
+
+article button:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.profilknapper {
+  text-align: end;
+  margin-top: 2rem;
 }
 
 /*BURGERMENU*/
@@ -53,6 +127,10 @@ a:hover {
 }
 
 @media only screen and (min-width: 600px) {
+  header {
+    align-items: baseline;
+  }
+
   #menuknap {
     display: none;
   }
@@ -76,6 +154,7 @@ header {
   padding: 1rem 1.5rem;
   display: grid;
   grid-template-columns: auto 1fr;
+  box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3);
 }
 
 header .logo {
@@ -88,16 +167,20 @@ header .logo img {
   display: inline;
 }
 
+/*LISTE / HUNDE.HTML */
+
 .data_container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
-.valgt {
-  background-color: #29abe2;
+article {
+  border: 1px solid var(--accent);
+  padding: 1rem;
 }
 
-/*pop-up*/
+/*POP-UP DESIGN*/
 
 #popup {
   width: 100vw;
@@ -115,7 +198,7 @@ header .logo img {
 }
 
 #popup article {
-  background-color: white;
+  background-color: var(--secondary);
   width: 85%;
   margin: auto;
 }
@@ -133,5 +216,5 @@ header .logo img {
 /*FOOTER*/
 
 footer {
-  background-color: #29abe2;
+  background-color: var(--primary);
 }
