@@ -170,6 +170,10 @@ article {
 
 /*POP-UP DESIGN*/
 
+#singleview {
+  grid-template-columns: auto;
+}
+
 #popup {
   width: 100vw;
   height: 100vh;
@@ -237,6 +241,31 @@ footer {
 }
 
 @media (min-width: 780px) {
+  #singleview {
+    grid-template-columns: auto minmax(0, 1200px) auto;
+  }
+
+  #singleview .tilbage {
+    margin: 1rem;
+  }
+
+  #singleview article {
+    grid-column: 2/3;
+    justify-content: center;
+  }
+
+  #singleview article img {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+  }
+
+  #singleview section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 2em;
+  }
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
