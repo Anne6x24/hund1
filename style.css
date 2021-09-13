@@ -133,28 +133,6 @@ header ul li {
   background-color: var(--primary);
 } */
 
-@media only screen and (min-width: 600px) {
-  header {
-    align-items: baseline;
-  }
-
-  #menuknap {
-    display: none;
-  }
-
-  #menu.hidden {
-    transform: translateX(0);
-    opacity: 1;
-    display: flex;
-    justify-content: end;
-    /*gap: 30px;*/
-  }
-
-  #menu li {
-    display: inline-block;
-  }
-}
-
 /*HEADER WEB*/
 
 header {
@@ -231,9 +209,48 @@ footer {
   text-align: center;
 }
 
+/*SKAERME STOERRE END....*/
+
+/*BURGER MENU*/
+
+@media only screen and (min-width: 600px) {
+  header {
+    align-items: baseline;
+  }
+
+  #menuknap {
+    display: none;
+  }
+
+  #menu.hidden {
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+    justify-content: end;
+    /*gap: 30px;*/
+  }
+
+  #menu li {
+    display: inline-block;
+  }
+}
+
 @media (min-width: 780px) {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #popupinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #popupinfo img {
+    width: 300px;
+  }
+
+  #popupinfo .tekst {
+    margin: 1.5rem;
   }
 }
