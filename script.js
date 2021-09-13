@@ -35,7 +35,7 @@ function filtrerHunde() {
 async function hentData() {
   const resspons = await fetch(url, options);
   hunde = await resspons.json();
-  console.log(hunde);
+  //console.log(hunde);
   visHund();
 }
 
@@ -43,6 +43,7 @@ function visHund() {
   container.textContent = "";
   console.log(filter);
   hunde.forEach((dyr) => {
+    //  console.log(dyr.talent);
     if (filter == dyr.talent || filter == "alle") {
       const klon = temp.cloneNode(true).content;
       const pic = ".jpg";
@@ -76,7 +77,7 @@ function visDetaljer(hundeData) {
   popup.querySelector(".kortbeskrivelse").textContent =
     hundeData.kortbeskrivelse;
   popup.querySelector(".pris").textContent = hundeData.pris + ",-";
-  console.log(hundeData);
+  //console.log(hundeData);
 }
 
 document.querySelector("#tilbage").addEventListener("click", lukPopup);
