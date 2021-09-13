@@ -14,11 +14,65 @@
     <title>Document</title>
 
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      #box {
+        background-color: var(--primary);
+      }
+
+
+      /* img i mobil-version  */
+      img {
+        min-width: 100%;
+        display: grid;
+        grid-column: 3;
+        
+      }
+
+      h2 {
+        text-align: center;
+      }
+
       .kasse {
           display: grid;
           grid-column: 2;
 
         }
+
+      .kasse1 {
+          background-color: black;
+          display: grid;
+          grid-column: 2;
+        }
+
+
+
+      /* underoverskrifter i colonner  */
+      @media (min-width: 780px) {
+        #section1 .section_wrapper, #section2 .section_wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 50px;
+        }
+
+        #section1 .col, #section2 .col {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        /* img i web-version  */
+        .hunde img {
+          max-width: 60%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: -300px;
+          width: 50%;
+        }
+        
+      }
     </style>
 
   </head>
@@ -52,17 +106,62 @@
       </div>
       
 
-      <section>
-        <h2>om os</h2>
-        <p>tekst</p>
-        <img src="" alt="" />
-      </section>
+      <section id="section1">
+        <div class ="section_wrapper">
+          <div class="col">
+            <div class="top">
+              <h3>Begyndelsen</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
+                enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
+                corporis quam voluptas inventore dolore perspiciatis quibusdam! 
+                Nulla voluptates laboriosam aspernatur!</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="top">
+              <h3>INDSÆT BILLEDE HER</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
+                enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
+                corporis quam voluptas inventore dolore perspiciatis quibusdam! 
+                Nulla voluptates laboriosam aspernatur!</p>
+            </div>
+          </div>
+        
+        </div>
+        
+        </section>
 
-      <section>
-        <img src="" alt="" />
-        <h2>om os</h2>
-        <p>tekst</p>
-      </section>
+
+        <section id="section2">
+          <div class ="section_wrapper">
+            <div class="col">
+              <div class="top">
+                <h3>INDSÆT BILLEDE HER</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
+                  enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
+                  corporis quam voluptas inventore dolore perspiciatis quibusdam! 
+                  Nulla voluptates laboriosam aspernatur!</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="top">
+                <h3>Fremtiden</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
+                  enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
+                  corporis quam voluptas inventore dolore perspiciatis quibusdam! 
+                  Nulla voluptates laboriosam aspernatur!</p>
+              </div>
+            </div>
+          
+          </div>
+          
+          </section>
+
+      
       <script src="burgermenu.js"></script>
     </main>
 
