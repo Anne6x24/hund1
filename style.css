@@ -32,7 +32,7 @@ a:hover {
 .hidden {
   /*    display: none;*/
   /*    transform: scale(0);*/
-  transform: translateX(-100%);
+  transform: translateX(100%);
   opacity: 0;
 }
 
