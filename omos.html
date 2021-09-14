@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
     <style>
-
       * {
         box-sizing: border-box;
       }
@@ -21,39 +20,36 @@
         background-color: var(--primary);
       }
 
-
       /* img i mobil-version  */
       img {
         min-width: 60%;
         display: grid;
         grid-column: 3;
-        
-      }
-
-      h2 {
-        text-align: center;
       }
 
       .kasse1 {
-          display: grid;
-          grid-column: 2;
-
-        }
+        display: grid;
+        grid-column: 2;
+      }
 
       .kasse {
-          background-color: black;
-          display: grid;
-          grid-column: 2;
-        }
+        background-color: black;
+        display: grid;
+        grid-column: 2;
+      }
 
-
+      #section1,
+      #section2 {
+        line-height: 2em;
+      }
 
       /* underoverskrifter i colonner  */
       @media (min-width: 780px) {
         #section2 .section_wrapper {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-gap: 50px;
+          grid-gap: 3rem;
+          margin: 3rem;
         }
 
         #section2 .col {
@@ -70,9 +66,7 @@
           margin-right: auto;
           width: 50%;
         }
-        
       }
-
     </style>
   </head>
   <body>
@@ -96,56 +90,51 @@
     </header>
 
     <main>
-      
       <div class="kasse1">
         <div class="overskrift">
           <h2>Om os</h2>
         </div>
       </div>
-   
-     
+
       <div class="kasse">
         <div class="hunde">
-          <img src="svg/hunde_flok.png" alt="">
+          <img src="svg/hunde_flok.png" alt="" />
         </div>
-
       </div>
 
-     
-
-
-<section id="section2">
-<div class ="section_wrapper">
-  <div class="col">
-    <div class="top">
-      <h3>Begyndelsen</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-        Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-        enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-        corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-        Nulla voluptates laboriosam aspernatur!</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="top">
-      <h3>Fremtiden</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-        Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-        enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-        corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-        Nulla voluptates laboriosam aspernatur!</p>
-    </div>
-  </div>
-
-</div>
-
-</section>
-
-
+      <section id="section2">
+        <div class="section_wrapper">
+          <div class="col">
+            <div class="top">
+              <h2>Begyndelsen</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Incidunt enim est similique soluta vero! Ab fuga aliquam
+                sapiente blanditiis, enim ipsam non suscipit optio dolores
+                dolorum fugit rerum ipsa, corporis quam voluptas inventore
+                dolore perspiciatis quibusdam! Nulla voluptates laboriosam
+                aspernatur!
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="top">
+              <h2>Fremtiden</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Incidunt enim est similique soluta vero! Ab fuga aliquam
+                sapiente blanditiis, enim ipsam non suscipit optio dolores
+                dolorum fugit rerum ipsa, corporis quam voluptas inventore
+                dolore perspiciatis quibusdam! Nulla voluptates laboriosam
+                aspernatur!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="burgermenu.js"></script>
   </body>
-
 
   <footer>
     <div>
@@ -156,8 +145,7 @@
 
     <div>
       <h3>TLF NUMMER</h3>
-      <p> <a href="tel:+4510101010"></a>
-        +45 10 10 10 10</p>
+      <p><a href="tel:+4510101010"></a> +45 10 10 10 10</p>
       <p>man-tors 8-12</p>
     </div>
 
