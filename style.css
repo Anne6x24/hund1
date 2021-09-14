@@ -101,6 +101,10 @@ article button:hover {
   margin-top: 2rem;
 }
 
+#singleview .tilbage {
+  margin: 1rem;
+}
+
 /*BURGERMENU*/
 
 .hidden {
@@ -243,10 +247,6 @@ footer {
 @media (min-width: 780px) {
   #singleview {
     grid-template-columns: auto minmax(0, 1200px) auto;
-  }
-
-  #singleview .tilbage {
-    margin: 1rem;
   }
 
   #singleview article {
