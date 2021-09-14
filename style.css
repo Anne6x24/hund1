@@ -11,6 +11,7 @@ main {
   display: grid;
   grid-template-columns: auto minmax(0, 1200px) auto;
   align-items: center;
+  line-height: 2em;
 }
 
 main > section {
