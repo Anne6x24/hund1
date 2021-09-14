@@ -28,21 +28,16 @@
         grid-column: 3;
       }
 
-      .kasse {
-        display: grid;
-        grid-column: 2;
-      }
+      #hunde {
+  background-image: url(billeder/splash-t_dogz.jpg);
+  width: 100%;
+  height: 104vh;  
+  display: grid;
+  background-size: cover;
+  background-position: 13% 10%;
+  margin-bottom: -12rem;
+}
 
-      .kasse1 {
-        background-color: black;
-        display: grid;
-        grid-column: 2;
-      }
-
-      #forside,
-      section {
-        line-height: 2em;
-      }
 
       /* underoverskrifter i colonner  */
       @media (min-width: 780px) {
@@ -62,13 +57,9 @@
         }
 
         /* img i web-version  */
-        .hunde img {
-          max-width: 60%;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: -300px;
-          width: 50%;
+        #hunde {
+          margin-bottom: -5rem;
+         
         }
       }
     </style>
@@ -95,11 +86,7 @@
     </header>
 
     <main id="forside">
-      <div class="kasse">
-        <div class="hunde">
-          <img src="billeder/splash-t_dogz.jpg" alt="" />
-        </div>
-      </div>
+   <section id="hunde"></section>
 
       <section id="section1">
         <div class="section_wrapper">
