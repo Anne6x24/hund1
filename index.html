@@ -21,42 +21,41 @@
         background-color: var(--primary);
       }
 
-
       /* img i mobil-version  */
       img {
         min-width: 100%;
         display: grid;
         grid-column: 3;
-        
-      }
-
-      h2 {
-        text-align: center;
       }
 
       .kasse {
-          display: grid;
-          grid-column: 2;
-
-        }
+        display: grid;
+        grid-column: 2;
+      }
 
       .kasse1 {
-          background-color: black;
-          display: grid;
-          grid-column: 2;
-        }
+        background-color: black;
+        display: grid;
+        grid-column: 2;
+      }
 
-
+      #forside,
+      section {
+        line-height: 2em;
+      }
 
       /* underoverskrifter i colonner  */
       @media (min-width: 780px) {
-        #section1 .section_wrapper, #section2 .section_wrapper {
+        #section1 .section_wrapper,
+        #section2 .section_wrapper {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-gap: 50px;
+          grid-gap: 3rem;
+          margin: 3rem;
         }
 
-        #section1 .col, #section2 .col {
+        #section1 .col,
+        #section2 .col {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -71,10 +70,8 @@
           margin-bottom: -300px;
           width: 50%;
         }
-        
       }
     </style>
-
   </head>
   <body>
     <header>
@@ -97,71 +94,75 @@
       </nav>
     </header>
 
-    <main>
+    <main id="forside">
       <div class="kasse">
         <div class="hunde">
-          <img src="billeder/Splash_hund.jpg" alt="">
+          <img src="billeder/Splash_hund.jpg" alt="" />
         </div>
-
       </div>
-      
 
       <section id="section1">
-        <div class ="section_wrapper">
+        <div class="section_wrapper">
           <div class="col">
             <div class="top">
-              <h3>Begyndelsen</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-                enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-                corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-                Nulla voluptates laboriosam aspernatur!</p>
+              <h2>Begyndelsen</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Incidunt enim est similique soluta vero! Ab fuga aliquam
+                sapiente blanditiis, enim ipsam non suscipit optio dolores
+                dolorum fugit rerum ipsa, corporis quam voluptas inventore
+                dolore perspiciatis quibusdam! Nulla voluptates laboriosam
+                aspernatur!
+              </p>
             </div>
           </div>
           <div class="col">
             <div class="top">
-              <h3>INDSÆT BILLEDE HER</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-                enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-                corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-                Nulla voluptates laboriosam aspernatur!</p>
+              <h2>INDSÆT BILLEDE HER</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Incidunt enim est similique soluta vero! Ab fuga aliquam
+                sapiente blanditiis, enim ipsam non suscipit optio dolores
+                dolorum fugit rerum ipsa, corporis quam voluptas inventore
+                dolore perspiciatis quibusdam! Nulla voluptates laboriosam
+                aspernatur!
+              </p>
             </div>
           </div>
-        
         </div>
-        
-        </section>
+      </section>
 
-
-        <section id="section2">
-          <div class ="section_wrapper">
-            <div class="col">
-              <div class="top">
-                <h3>INDSÆT BILLEDE HER</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                  Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-                  enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-                  corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-                  Nulla voluptates laboriosam aspernatur!</p>
-              </div>
+      <section id="section2">
+        <div class="section_wrapper">
+          <div class="col">
+            <div class="top">
+              <h2>INDSÆT BILLEDE HER</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Incidunt enim est similique soluta vero! Ab fuga aliquam
+                sapiente blanditiis, enim ipsam non suscipit optio dolores
+                dolorum fugit rerum ipsa, corporis quam voluptas inventore
+                dolore perspiciatis quibusdam! Nulla voluptates laboriosam
+                aspernatur!
+              </p>
             </div>
-            <div class="col">
-              <div class="top">
-                <h3>Fremtiden</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                  Incidunt enim est similique soluta vero! Ab fuga aliquam sapiente blanditiis, 
-                  enim ipsam non suscipit optio dolores dolorum fugit rerum ipsa, 
-                  corporis quam voluptas inventore dolore perspiciatis quibusdam! 
-                  Nulla voluptates laboriosam aspernatur!</p>
-              </div>
-            </div>
-          
           </div>
-          
-          </section>
+          <div class="col">
+            <div class="top">
+              <h2>Fremtiden</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Incidunt enim est similique soluta vero! Ab fuga aliquam
+                sapiente blanditiis, enim ipsam non suscipit optio dolores
+                dolorum fugit rerum ipsa, corporis quam voluptas inventore
+                dolore perspiciatis quibusdam! Nulla voluptates laboriosam
+                aspernatur!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      
       <script src="burgermenu.js"></script>
     </main>
 
