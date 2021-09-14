@@ -147,6 +147,7 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   /* box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3); */
+
 }
 
 header .logo {
@@ -225,6 +226,8 @@ footer {
 @media only screen and (min-width: 600px) {
   header {
     align-items: baseline;
+    margin-left: 6em;
+    margin-right: 6em;
   }
 
   #menuknap {
