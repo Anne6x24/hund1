@@ -277,8 +277,7 @@ footer a {
 @media only screen and (min-width: 600px) {
   header {
     align-items: baseline;
-    margin-left: 6em;
-    margin-right: 6em;
+   
   }
 
   #menuknap {
@@ -296,9 +295,35 @@ footer a {
   #menu li {
     display: inline-block;
   }
+  #menu li {
+    border-left: 1px solid var(--tertiary);
+    border-bottom: 5px solid var(--tertiary);
+    border-top: 1px solid var(--tertiary);
+    border-right: 5px solid var(--tertiary);
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.4rem 0.3rem;
+    cursor: pointer;
+    padding: 0.7rem;
+    font-size: 1em;
+    font-weight: bolder;
+    color: var(--primary);
+  
+  }
+#menu a {
+  color: var(--text);
 }
 
-@media (min-width: 760px) {
+}
+
+@media (min-width: 780px) {
+
+  header {
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+
   #singleview {
     grid-template-columns: auto minmax(0, 1200px) auto;
   }
@@ -343,25 +368,7 @@ footer a {
     width: 65%;
   }
 
-  #menu li {
-    border-left: 1px solid var(--tertiary);
-    border-bottom: 5px solid var(--tertiary);
-    border-top: 1px solid var(--tertiary);
-    border-right: 5px solid var(--tertiary);
-    text-align: start;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0.4rem 0.3rem;
-    cursor: pointer;
-    padding: 0.7rem;
-    font-size: 1em;
-    font-weight: bolder;
-    color: var(--primary);
-  
-  }
-#menu a {
-  color: var(--text);
-}
+
 
 #forside #section2 {
   margin-top: -5rem;
