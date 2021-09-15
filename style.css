@@ -62,6 +62,14 @@ footer a:hover {
 #forside a:hover {
   color: var(--tertiary);
 }
+
+.overskrift {
+  grid-column: 2/3;
+}
+.overskrift h1 {
+  font-size: 2em;
+}
+
 /*FARVER*/
 
 /*variabler på farver så man nemmere/hurtigere kan rette farver*/
@@ -313,6 +321,12 @@ footer a {
   }
 #menu a {
   color: var(--text);
+}
+.overskrift {
+  grid-column: 2/3;
+}
+.overskrift h1 {
+  font-size: 2em;
 }
 
 }
