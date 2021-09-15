@@ -145,10 +145,12 @@ article button {
   list-style-type: none;
   transition: transform 0.3s;
   transform-origin: top left;
+  
 }
 
-header ul li {
+#menu li {
   margin: 20px 20px;
+
 }
 
 /*.header_nav {
@@ -269,7 +271,7 @@ footer {
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 760px) {
   #singleview {
     grid-template-columns: auto minmax(0, 1200px) auto;
   }
@@ -312,10 +314,30 @@ footer {
   #popup article {
     width: 65%;
   }
-}
+
+  #menu li {
+    border-left: 1px solid var(--secondary);
+    border-bottom: 5px solid var(--secondary);
+    border-top: 1px solid var(--secondary);
+    border-right: 5px solid var(--secondary);
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.4rem 0.3rem;
+    cursor: pointer;
+    padding: 0.7rem;
+    font-size: 1em;
+    font-weight: bolder;
+    color: var(--primary);
+  
+  }
+
 
 @media (min-width: 1000px) {
   #popup article {
     width: 40%;
   }
+
+
+
 }
