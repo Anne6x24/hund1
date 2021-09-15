@@ -16,6 +16,7 @@ main {
 }
 
 main > section {
+  /*alle sections i main skal placere sig i column 2/3*/
   grid-column: 2/3;
   padding-inline: 1rem;
   padding-block: 1rem;
@@ -48,6 +49,7 @@ a:hover {
 
 /*FARVER*/
 
+/*variabler på farver så man nemmere/hurtigere kan rette farver*/
 html {
   --primary: #29abe2;
   --secondary: #fff;
@@ -58,6 +60,7 @@ html {
 
 /*KNAPPER*/
 
+/*filtreringsknapper, design*/
 nav button {
   border: 1px solid var(--accent);
   background-color: var(--secondary);
@@ -76,15 +79,19 @@ nav ul {
   padding: 0;
 }
 
+/*når man hover på filtreringsknapperne skal de blive lidt større*/
 nav button:hover {
   scale: 1.1;
 }
+
+/* .valgt er når filterknappen er valgt*/
 
 .valgt {
   background-color: var(--primary);
   color: var(--secondary);
 }
 
+/*knapperne inde i articlen/hundeprofil*/
 article button {
   border: 1px solid var(--accent);
   background-color: var(--secondary);
@@ -92,15 +99,20 @@ article button {
   font-size: 1em;
 }
 
-article button:hover {
+/*når man hover på knapperne inde i de forskellige hunde profiler*/
+
+.profilknapper {
+  /*.profilknapper er begge knapper inde i articlen/ hundeprofilen*/
+  text-align: end;
+  margin-top: 2rem;
+}
+
+.quickview:hover,
+.detaljer:hover {
+  /*når man hover over de enkelte knapper i hundeprofilen skal baggrundsfarven ændres*/
   background-color: var(--primary);
   color: var(--secondary);
   cursor: pointer;
-}
-
-.profilknapper {
-  text-align: end;
-  margin-top: 2rem;
 }
 
 #singleview .tilbage {
@@ -109,8 +121,9 @@ article button:hover {
 
 /*BURGERMENU*/
 
+/*når menuen er skjult*/
 .hidden {
-     display: none;
+  display: none; /*skjul/vis ikke elementet*/
   /*    transform: scale(0);*/
   transform: translateX(100%);
   opacity: 0;
@@ -149,7 +162,6 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   /* box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3); */
-
 }
 
 header .logo {
@@ -165,6 +177,7 @@ header .logo img {
 /*LISTE / HUNDE.HTML */
 
 .data_container {
+  /*grid for vores dynamiske indhold, hvordan hundeprofilerne skal placeres i filtreringssiden*/
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
@@ -182,14 +195,15 @@ article {
 }
 
 #popup {
-  width: 100vw;
+  /*popup vinduet åbnes når der klikkes på en hund*/
+  width: 100vw; /*popup skal fylde hele vinduet*/
   height: 100vh;
-  position: fixed;
+  position: fixed; /*popup skal placeres ovenpå sidens øvrige sider*/
   top: 0;
   background-color: #00000099;
   padding-block: 2em;
-  display: none;
-  overflow: scroll;
+  display: none; /*popup er som udgangspunkt lukket*/
+  overflow: scroll; /*hvis billedet er for stort skal der være mulighed for at scrolle*/
   padding-inline: 0;
 }
 
@@ -198,6 +212,7 @@ article {
 }
 
 #popup article {
+  /*popup vinduets indhold udfyldes dynamisk*/
   background-color: var(--secondary);
   width: 85%;
   margin: auto;
@@ -208,7 +223,7 @@ article {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  overflow: hidden;
+  overflow: hidden; /*fylder knappen mere, croppes det*/
   font-weight: bolder;
   font-size: 16px;
 }
