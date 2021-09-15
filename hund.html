@@ -20,7 +20,9 @@
       </div>
       <nav>
         <div id="menuknap">☰</div>
+        <!--Burgermenu ikon i mobil version-->
         <ul id="menu" class="hidden">
+          <!--Menu er skjult til at starte med da vi kører med mobile first-->
           <li><a href="index.html">FORSIDE</a></li>
           <li><a href="hund.html">HUND</a></li>
           <li>
@@ -35,6 +37,7 @@
 
     <main>
       <section class="filtermenu">
+        <!--filtreringsknapper med data attributter-->
         <nav>
           <ul>
             <button data-talent="alle" class="valgt">Alle</button>
@@ -49,6 +52,7 @@
 
       <section id="popup">
         <article id="popupinfo">
+          <!--popup vinduet når man klikker på quickview-->
           <div>
             <button id="tilbage">X</button>
             <img class="billede" src="" alt="" />
@@ -65,6 +69,7 @@
       </section>
 
       <section class="data_container"></section>
+      <!--tom container til alle hundene-->
 
       <template>
         <article>
