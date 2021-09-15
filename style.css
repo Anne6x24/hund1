@@ -51,6 +51,9 @@ a {
   background-color: var(--tertiary);
 }
 
+.filtermenu h2 {
+  color: var(--text);
+}
 /*FARVER*/
 
 /*variabler på farver så man nemmere/hurtigere kan rette farver*/
@@ -115,7 +118,7 @@ article button {
 .quickview:hover,
 .detaljer:hover {
   /*når man hover over de enkelte knapper i hundeprofilen skal baggrundsfarven ændres*/
-  background-color: var(--primary);
+  background-color: var(--tertiary);
   color: var(--secondary);
   cursor: pointer;
 }
@@ -123,6 +126,13 @@ article button {
 #singleview .tilbage {
   margin: 1rem;
 }
+
+.tilbage:hover {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
 
 /*BURGERMENU*/
 
@@ -238,9 +248,14 @@ article {
 /*FOOTER*/
 
 footer {
-  background-color: var(--primary);
+  background-color: var(--tertiary);
   padding: 1em;
   text-align: center;
+  color: var(--text);
+}
+
+footer a {
+  color: var(--text);
 }
 
 /*SKAERME STOERRE END....*/
@@ -279,6 +294,7 @@ footer {
   #singleview article {
     grid-column: 2/3;
     justify-content: center;
+    margin-bottom: 2em;
   }
 
   #singleview article img {
@@ -339,7 +355,4 @@ footer {
   #popup article {
     width: 40%;
   }
-
-
-
 }
