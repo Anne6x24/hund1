@@ -314,6 +314,7 @@ footer a {
 #menu a {
   color: var(--text);
 }
+
 }
 
 @media (min-width: 780px) {
