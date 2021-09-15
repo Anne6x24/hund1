@@ -74,11 +74,11 @@ footer a:hover {
 
 /*variabler på farver så man nemmere/hurtigere kan rette farver*/
 html {
-  --primary:  #000;
+  --primary: #000;
   --secondary: #fff;
   --tertiary: #9ce861;
   --accent: #c5c9ca;
-  --text: #496e2c;;
+  --text: #496e2c;
 }
 
 /*KNAPPER*/
@@ -87,7 +87,7 @@ html {
 nav button {
   border: 1px solid var(--tertiary);
   background-color: Transparent;
-text-align: center;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 0.2rem 0.1rem;
@@ -97,8 +97,6 @@ text-align: center;
   font-weight: bolder;
   color: var(--text);
 }
-
-
 
 nav ul {
   padding: 0;
@@ -112,7 +110,7 @@ nav button:hover {
 /* .valgt er når filterknappen er valgt*/
 
 .valgt {
- background-color: var(--tertiary) ;
+  background-color: var(--tertiary);
 }
 
 /*knapperne inde i articlen/hundeprofil*/
@@ -149,7 +147,6 @@ article button {
   cursor: pointer;
 }
 
-
 /*BURGERMENU*/
 
 /*når menuen er skjult*/
@@ -171,12 +168,10 @@ article button {
   list-style-type: none;
   transition: transform 0.3s;
   transform-origin: top left;
-  
 }
 
 #menu li {
   margin: 20px 20px;
-
 }
 
 /*.header_nav {
@@ -285,7 +280,6 @@ footer a {
 @media only screen and (min-width: 600px) {
   header {
     align-items: baseline;
-   
   }
 
   #menuknap {
@@ -317,22 +311,19 @@ footer a {
     font-size: 1em;
     font-weight: bolder;
     color: var(--primary);
-  
   }
-#menu a {
-  color: var(--text);
-}
-.overskrift {
-  grid-column: 2/3;
-}
-.overskrift h1 {
-  font-size: 2em;
-}
-
+  #menu a {
+    color: var(--text);
+  }
+  .overskrift {
+    grid-column: 2/3;
+  }
+  .overskrift h1 {
+    font-size: 2em;
+  }
 }
 
 @media (min-width: 780px) {
-
   header {
     margin-left: 6em;
     margin-right: 6em;
@@ -360,6 +351,12 @@ footer a {
     line-height: 2em;
   }
 
+  /*SINGLE VIEW TEKST*/
+
+  .profiltekst {
+    padding-inline: 1rem;
+  }
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -378,15 +375,13 @@ footer a {
     margin: 1.5rem;
   }
 
-  #popup article {
-    width: 65%;
+  /*#popup article {
+    width: 85%;
+  } */
+
+  #forside #section2 {
+    margin-top: -5rem;
   }
-
-
-
-#forside #section2 {
-  margin-top: -5rem;
-}
 }
 @media (min-width: 1000px) {
   #popup article {
