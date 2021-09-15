@@ -205,6 +205,10 @@ article {
   padding: 1rem;
 }
 
+.forord {
+  max-width: 600px;
+}
+
 /*POP-UP DESIGN*/
 
 #singleview {
