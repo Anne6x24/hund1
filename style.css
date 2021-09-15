@@ -51,6 +51,10 @@ a {
   background-color: var(--tertiary);
 }
 
+footer a:hover {
+  text-decoration: underline var(--text);
+}
+
 .filtermenu h2 {
   color: var(--text);
 }
