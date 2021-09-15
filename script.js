@@ -23,15 +23,7 @@ function start() {
   hentData(); //JSON data
 }
 
-function filtrerHunde() {
-  filter = this.dataset.talent; //vi henter information til hvad filteret er.
-  document.querySelector(".valgt").classList.remove("valgt"); //vi fjerner klassen for at den kan tilføjes (der kan klikkes) igen.
-  this.classList.add("valgt");
-
-  visHund();
-  header.textContent = this.textContent; //vores overskrift i filteret
-}
-
+//Her hentes json data ind og sendes videre til funktionen visHund
 async function hentData() {
   const resspons = await fetch(url, options); //vi henter vores JSON data.
   hunde = await resspons.json();
@@ -39,8 +31,9 @@ async function hentData() {
   visHund();
 }
 
+// visHund sætter hver enkelt hund ind i html
 function visHund() {
-  container.textContent = ""; //vi tømmer vores container med data for at vi kan klikke og filtrere igen.
+  container.textContent = ""; //vi tømmer vores container med data for at der kan fyldes nyt indhold i den.
   console.log(filter);
   hunde.forEach((dyr) => {
     //  console.log(dyr.talent);
@@ -66,7 +59,7 @@ function visHund() {
     }
   });
 }
-
+//når der klikkes på hver enkelt hund vises denne seperat (popup)
 function visDetaljer(hundeData) {
   //samme princip som visHund
   const popup = document.querySelector("#popup");
@@ -87,6 +80,16 @@ document.querySelector("#tilbage").addEventListener("click", lukPopup); //lyt ef
 
 function lukPopup() {
   document.querySelector("#popup").style.display = "none"; //fjerner popup
+}
+
+//funktion der filtrere indholdet på siden alt efter hvilken knap der er klikket på
+function filtrerHunde() {
+  filter = this.dataset.talent; //vi henter information til hvad filteret er.
+  document.querySelector(".valgt").classList.remove("valgt"); //vi fjerner klassen for at den kan tilføjes (der kan klikkes) igen.
+  this.classList.add("valgt");
+
+  visHund();
+  header.textContent = this.textContent; //vores overskrift i filteret
 }
 
 hentData(); //JSON data
