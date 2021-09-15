@@ -5,7 +5,6 @@ img {
 body {
   margin: 0;
   padding: 0;
-  background-color: #c5c9ca;
 }
 
 main {
@@ -48,15 +47,15 @@ a {
   font-family: "Urbanist", sans-serif;
 }
 
-a:hover {
-  text-decoration: underline;
+#menu li:hover {
+  background-color: #fff;
 }
 
 /*FARVER*/
 
 /*variabler på farver så man nemmere/hurtigere kan rette farver*/
 html {
-  --primary: #29abe2;
+  --primary:  #000;
   --secondary: #fff;
   --tertiary: #000;
   --accent: #c5c9ca;
@@ -67,9 +66,12 @@ html {
 
 /*filtreringsknapper, design*/
 nav button {
-  border: 1px solid var(--accent);
-  background-color: var(--secondary);
-  text-align: center;
+  border-left: 5px solid var(--text);
+    border-bottom: 5px solid var(--text);
+    border-top: 1px solid var(--text);
+    border-right: 1px solid var(--text);
+  background-color: Transparent;
+text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 0.2rem 0.1rem;
@@ -92,8 +94,7 @@ nav button:hover {
 /* .valgt er når filterknappen er valgt*/
 
 .valgt {
-  background-color: var(--primary);
-  color: var(--secondary);
+ text-decoration: underline #000 ;
 }
 
 /*knapperne inde i articlen/hundeprofil*/
