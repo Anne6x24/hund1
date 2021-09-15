@@ -54,6 +54,10 @@ a {
 .filtermenu h2 {
   color: var(--text);
 }
+
+#forside a:hover {
+  color: var(--tertiary);
+}
 /*FARVER*/
 
 /*variabler på farver så man nemmere/hurtigere kan rette farver*/
@@ -351,6 +355,10 @@ footer a {
   color: var(--text);
 }
 
+#forside #section2 {
+  margin-top: -5rem;
+}
+}
 @media (min-width: 1000px) {
   #popup article {
     width: 40%;
