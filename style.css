@@ -48,7 +48,7 @@ a {
 }
 
 #menu li:hover {
-  background-color: #fff;
+  background-color: var(--tertiary);
 }
 
 /*FARVER*/
@@ -57,19 +57,16 @@ a {
 html {
   --primary:  #000;
   --secondary: #fff;
-  --tertiary: #000;
+  --tertiary: #9ce861;
   --accent: #c5c9ca;
-  --text: #404042;
+  --text: #496e2c;;
 }
 
 /*KNAPPER*/
 
 /*filtreringsknapper, design*/
 nav button {
-  border-left: 5px solid var(--text);
-    border-bottom: 5px solid var(--text);
-    border-top: 1px solid var(--text);
-    border-right: 1px solid var(--text);
+  border: 1px solid var(--tertiary);
   background-color: Transparent;
 text-align: center;
   text-decoration: none;
@@ -79,8 +76,10 @@ text-align: center;
   padding: 0.7rem;
   font-size: 1em;
   font-weight: bolder;
-  color: var(--primary);
+  color: var(--text);
 }
+
+
 
 nav ul {
   padding: 0;
@@ -94,7 +93,7 @@ nav button:hover {
 /* .valgt er når filterknappen er valgt*/
 
 .valgt {
- text-decoration: underline #000 ;
+ background-color: var(--tertiary) ;
 }
 
 /*knapperne inde i articlen/hundeprofil*/
@@ -317,10 +316,10 @@ footer {
   }
 
   #menu li {
-    border-left: 1px solid var(--primary);
-    border-bottom: 5px solid var(--primary);
-    border-top: 1px solid var(--primary);
-    border-right: 5px solid var(--primary);
+    border-left: 1px solid var(--tertiary);
+    border-bottom: 5px solid var(--tertiary);
+    border-top: 1px solid var(--tertiary);
+    border-right: 5px solid var(--tertiary);
     text-align: start;
     text-decoration: none;
     display: inline-block;
@@ -332,7 +331,9 @@ footer {
     color: var(--primary);
   
   }
-
+#menu a {
+  color: var(--text);
+}
 
 @media (min-width: 1000px) {
   #popup article {
