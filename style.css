@@ -317,10 +317,10 @@ footer {
   }
 
   #menu li {
-    border-left: 1px solid var(--secondary);
-    border-bottom: 5px solid var(--secondary);
-    border-top: 1px solid var(--secondary);
-    border-right: 5px solid var(--secondary);
+    border-left: 1px solid var(--primary);
+    border-bottom: 5px solid var(--primary);
+    border-top: 1px solid var(--primary);
+    border-right: 5px solid var(--primary);
     text-align: start;
     text-decoration: none;
     display: inline-block;
