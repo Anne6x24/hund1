@@ -220,11 +220,13 @@ article {
   max-width: 600px;
 }
 
-/*POP-UP DESIGN*/
+/*SINGLEVIEW*/
 
 #singleview {
   grid-template-columns: auto;
 }
+
+/*POP-UP DESIGN*/
 
 #popup {
   /*popup vinduet åbnes når der klikkes på en hund*/
