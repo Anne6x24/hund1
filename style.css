@@ -365,6 +365,7 @@ footer a {
     max-width: 500px;
     display: block;
     margin: auto;
+    padding-top: 4.3rem;
   }
 
   #singleview section {
@@ -377,6 +378,13 @@ footer a {
 
   .profiltekst {
     padding-inline: 1rem;
+  }
+
+  .praktisk_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid var(--text);
+    text-align: center;
   }
 
   footer {
