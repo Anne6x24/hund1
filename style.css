@@ -338,6 +338,13 @@ footer a {
     grid-template-columns: 1fr 1fr;
   }
 
+  .forord .forord_billede {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+  }
+
   #singleview {
     grid-template-columns: auto minmax(0, 1200px) auto;
   }
