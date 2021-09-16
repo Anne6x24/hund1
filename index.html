@@ -39,6 +39,16 @@
         background-position: 94% 10%;
       }
 
+      #section1 .top_img {
+        max-width: 180px;
+        margin: auto;
+      }
+
+      #section2 .col {
+        margin: auto;
+        max-width: 280px;
+      }
+
       /* underoverskrifter i colonner  */
 
       @media (min-width: 780px) {
@@ -55,6 +65,15 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+        }
+
+        #section2 .col_right {
+          grid-column: 2/4;
+        }
+
+        #section2 .col {
+          grid-column: 1/2;
+          grid-row: 1;
         }
       }
     </style>
@@ -104,7 +123,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="top">
+            <div class="top_img">
               <img src="billeder/helte-hund.png" alt="" />
             </div>
           </div>
@@ -113,12 +132,7 @@
 
       <section id="section2">
         <div class="section_wrapper">
-          <div class="col">
-            <div class="top">
-              <img src="billeder/forvirret_hund.png" alt="" />
-            </div>
-          </div>
-          <div class="col">
+          <div class="col_right">
             <div class="top">
               <h2>Sådan booker du et Talent</h2>
               <ol id="forside_liste">
@@ -138,6 +152,12 @@
                   <h3>Fokuser på dit event og T-Dogz ordner resten</h3>
                 </li>
               </ol>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="top">
+              <img src="billeder/forvirret_hund.png" alt="" />
             </div>
           </div>
         </div>
