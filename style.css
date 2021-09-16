@@ -204,6 +204,12 @@ header .logo img {
 
 /*LISTE / HUNDE.HTML */
 
+/*forord*/
+
+.forord .forord_billede {
+  max-width: 350px;
+}
+
 .data_container {
   /*grid for vores dynamiske indhold, hvordan hundeprofilerne skal placeres i filtreringssiden*/
   display: grid;
