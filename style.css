@@ -332,11 +332,6 @@ footer a {
 }
 
 @media (min-width: 780px) {
-  header {
-    margin-left: 6em;
-    margin-right: 6em;
-  }
-
   /*forord inden filtreringsknapper*/
 
   .forord {
@@ -412,9 +407,22 @@ footer a {
   #forside #section2 {
     margin-top: -5rem;
   }
+
+  #hunde {
+    height: 34vh;
+  }
 }
 @media (min-width: 1000px) {
   #popup article {
     width: 40%;
+  }
+
+  header {
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+
+  #hunde {
+    height: 76vh;
   }
 }
