@@ -216,9 +216,9 @@ article {
   padding: 1rem;
 }
 
-.forord {
+/*.forord {
   max-width: 600px;
-}
+}*/
 
 /*SINGLEVIEW*/
 
@@ -329,6 +329,13 @@ footer a {
   header {
     margin-left: 6em;
     margin-right: 6em;
+  }
+
+  /*forord inden filtreringsknapper*/
+
+  .forord {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   #singleview {
