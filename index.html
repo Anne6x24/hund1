@@ -56,7 +56,10 @@
 
       /* underoverskrifter i colonner  */
 
-      @media (min-width: 780px) {
+      @media (min-width: 768px) {
+        #hunde {
+          height: 37vh;
+        }
         #section1 .section_wrapper,
         #section2 .section_wrapper {
           display: grid;
@@ -79,6 +82,12 @@
         #section2 .col {
           grid-column: 1/2;
           grid-row: 1;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        #hunde {
+          height: 80vh;
         }
       }
     </style>

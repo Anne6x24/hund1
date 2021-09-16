@@ -407,10 +407,6 @@ footer a {
   #forside #section2 {
     margin-top: -5rem;
   }
-
-  #hunde {
-    height: 34vh;
-  }
 }
 @media (min-width: 1000px) {
   #popup article {
